@@ -9,9 +9,9 @@ namespace ConsoleApp1
     public class Program
     {
         // URLs for the XML and XSD files (host these files at your public ASU web page or GitHub Pages)
-        public static string xmlURL = "https://www.public.asu.edu/~YourASURITEID/Hotels.xml";       // Q1.2
-        public static string xmlErrorURL = "https://www.public.asu.edu/~YourASURITEID/HotelsErrors.xml"; // Q1.3
-        public static string xsdURL = "https://www.public.asu.edu/~YourASURITEID/Hotels.xsd";         // Q1.1
+        public static string xmlURL = "https://mattcarlson22.github.io/cse445_a4/Hotels.xml";       // Q1.2
+        public static string xmlErrorURL = "https://mattcarlson22.github.io/cse445_a4/HotelsErrors.xml"; // Q1.3
+        public static string xsdURL = "https://mattcarlson22.github.io/cse445_a4/Hotels.xsd";         // Q1.1
 
         public static void Main(string[] args)
         {
@@ -81,7 +81,7 @@ namespace ConsoleApp1
 
                 // Convert the XML document to a JSON string.
                 // The third parameter (true) indicates that attributes should be converted (preceded by an underscore).
-                string jsonText = JsonConvert.SerializeXmlNode(doc, Formatting.Indented, true);
+                string jsonText = JsonConvert.SerializeXmlNode(doc, Newtonsoft.Json.Formatting.Indented, true);
                 return jsonText;
             }
             catch (Exception ex)
