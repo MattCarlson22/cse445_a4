@@ -15,7 +15,7 @@
   <Hotel Rating="3.8">
     <Name>Marriott</Name>
     <Phone>602-123-4567</Phone>
-    <Address>
+    <Address NearestAirport="Phoenix Sky Harbor">
       <Number>22</Number>
       <Street>Main St</Street>
       <City>Phoenix</City>
@@ -38,7 +38,7 @@
   <Hotel Rating="4.0">
     <Name>Hilton</Name>
     <Phone>602-222-3333</Phone>
-    <Address>
+    <Address NearestAirport="Tucson International">
       <Number>44</Number>
       <Street>2nd St</Street>
       <City>Tucson</City>
@@ -60,7 +60,7 @@
   <Hotel Rating="4.3">
     <Name>Renaissance</Name>
     <Phone>602-444-5555</Phone>
-    <Address>
+    <Address NearestAirport="Glendale Airport">
       <Number>66</Number>
       <Street>4th Ave</Street>
       <City>Glendale</City>
@@ -82,7 +82,7 @@
   <Hotel Rating="3.7">
     <Name>Comfort Inn</Name>
     <Phone>602-888-9999</Phone>
-    <Address>
+    <Address NearestAirport="Tempe Airport">
       <Number>88</Number>
       <Street>6th Ave</Street>
       <City>Tempe</City>
@@ -104,7 +104,7 @@
   <Hotel Rating="4.4">
     <Name>Best Western</Name>
     <Phone>602-555-6666</Phone>
-    <Address>
+    <Address NearestAirport="Tucson International">
       <Number>100</Number>
       <Street>8th St</Street>
       <City>Tucson</City>

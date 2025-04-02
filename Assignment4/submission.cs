@@ -82,15 +82,18 @@ namespace ConsoleApp1
                 {
                     doc.RemoveChild(doc.FirstChild);
                 }
-                // Convert only the document element (the root "Hotels") to JSON
-                string jsonText = JsonConvert.SerializeXmlNode(doc.DocumentElement, Newtonsoft.Json.Formatting.Indented, true);
+                // Convert the XML to JSON and include the root element ("Hotels")
+                string jsonText = JsonConvert.SerializeXmlNode(doc.DocumentElement, Newtonsoft.Json.Formatting.Indented, false);
+                // Replace attribute prefix "@" with "_" to match the expected JSON format
+                jsonText = jsonText.Replace("\"@", "\"_");
                 return jsonText;
             }
             catch (Exception ex)
             {
                 return "Exception: " + ex.Message;
             }
-        }
+}
+
 
     }
 }
