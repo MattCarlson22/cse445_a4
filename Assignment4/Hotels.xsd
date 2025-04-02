@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <!-- Root element -->
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://venus.sod.asu.edu/WSRepository/xml"
+  xmlns="http://venus.sod.asu.edu/WSRepository/xml"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
+  
   <xs:element name="Hotels">
     <xs:complexType>
       <xs:sequence>
@@ -22,15 +27,18 @@
                     <xs:element name="State" type="xs:string"/>
                     <xs:element name="Zip" type="xs:string"/>
                   </xs:sequence>
+                  <!-- NearestAirport must be provided in every Address -->
                   <xs:attribute name="NearestAirport" type="xs:string" use="required"/>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
-            <!-- Optional attribute for Hotel -->
+            <!-- Rating is optional -->
             <xs:attribute name="Rating" type="xs:string" use="optional"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  
 </xs:schema>
+
