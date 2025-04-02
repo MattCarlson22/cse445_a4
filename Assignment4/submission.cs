@@ -75,13 +75,15 @@ namespace ConsoleApp1
         {
             try
             {
-                // Load the XML document from the specified URL.
                 XmlDocument doc = new XmlDocument();
                 doc.Load(xmlUrl);
-
-                // Convert the XML document to a JSON string.
-                // The third parameter (true) indicates that attributes should be converted (preceded by an underscore).
-                string jsonText = JsonConvert.SerializeXmlNode(doc, Newtonsoft.Json.Formatting.Indented, true);
+                // Remove XML declaration if present
+                if (doc.FirstChild is XmlDeclaration)
+                {
+                    doc.RemoveChild(doc.FirstChild);
+                }
+                // Convert only the document element (the root "Hotels") to JSON
+                string jsonText = JsonConvert.SerializeXmlNode(doc.DocumentElement, Newtonsoft.Json.Formatting.Indented, true);
                 return jsonText;
             }
             catch (Exception ex)
@@ -89,5 +91,6 @@ namespace ConsoleApp1
                 return "Exception: " + ex.Message;
             }
         }
+
     }
 }

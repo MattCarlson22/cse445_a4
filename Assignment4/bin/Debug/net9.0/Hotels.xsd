@@ -12,7 +12,7 @@
               <xs:element name="Name" type="xs:string"/>
               <!-- One or more Phone elements -->
               <xs:element name="Phone" type="xs:string" maxOccurs="unbounded"/>
-              <!-- Address element with nested elements and an optional attribute -->
+              <!-- Address element with nested elements and a required attribute -->
               <xs:element name="Address">
                 <xs:complexType>
                   <xs:sequence>
@@ -22,12 +22,12 @@
                     <xs:element name="State" type="xs:string"/>
                     <xs:element name="Zip" type="xs:string"/>
                   </xs:sequence>
-                  <xs:attribute name="NearestAirport" type="xs:string" use="optional"/>
+                  <xs:attribute name="NearestAirport" type="xs:string" use="required"/>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
-            <!-- Required attribute for Hotel -->
-            <xs:attribute name="Rating" type="xs:string" use="required"/>
+            <!-- Optional attribute for Hotel -->
+            <xs:attribute name="Rating" type="xs:string" use="optional"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
