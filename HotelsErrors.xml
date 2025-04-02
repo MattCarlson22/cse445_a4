@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Hotel> <!-- Error: Root element should be "Hotels" -->
+  <Hotel Rating="4.2">
+    <Name>Westin</Name>
+    <Phone>480-968-8885</Phone>
+    <Phone>800-937-8461</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+  <Hotel> <!-- Error: Missing required attribute "Rating" -->
+    <Name>Marriott</Name>
+    <!-- Error: Missing Phone element -->
+    <Address>
+      <Number>22</Number>
+      <Street>Main St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+    </Address>
+  </Hotel>
+  <Hotel Rating="4.5">
+    <Name>Hyatt</Name>
+    <Name>Duplicate Hyatt</Name> <!-- Error: Two Name elements provided -->
+    <Phone>480-555-1234</Phone>
+    <Phone>480-555-5678</Phone>
+    <Address NearestAirport="Phoenix Sky Harbor">
+      <Number>33</Number>
+      <Street>1st Ave</Street>
+      <City>Scottsdale</City>
+      <State>AZ</State>
+      <Zip>85250</Zip>
+    <!-- Error: Missing closing tag for Address -->
+  </Hotel>
+</Hotel>
